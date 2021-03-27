@@ -1,0 +1,57 @@
+//////////////////////////////////////////////////////////////////////////////index.js file//////////////////////////////////////////////////////////////////////////////
+
+import React from "react";
+import ReactDOM from "react-dom";
+import App from "./App";
+
+ReactDOM.render( <App />, document.getElementById('root') );
+   
+
+
+/////////////////////////////////////////////////////////////////////////////App.js file///////////////////////////////////////////////////////////////////////////////////
+
+
+   import React from 'react';
+import {add ,sub, mul, div} from './Calc';
+
+function App(a,b){
+    return(
+        <>
+        <ul>
+            <li>The sum of two number is {add(40,4)}</li>
+            <li>The subtraction of two number is {sub(40,4)}</li>
+            <li>The multiplication of two number is {mul(40,4)}</li>
+            <li>The division of two number is {div(40,4)}</li>
+        </ul>
+    
+        </>
+    )
+}
+export default App;
+
+
+
+//////////////////////////////////////////////////////////////////////////////Calc.jsx file///////////////////////////////////////////////////////////////////////////////
+
+function add(a,b){
+    let sum=a+b;
+    return sum;
+}
+
+function sub(a,b){
+    let sub=a-b;
+    return sub;
+}
+
+function mul(a,b){
+    let mul=a*b;
+    return mul;
+}
+
+function div(a,b){
+    let mul=a/b;
+    return div;
+}
+
+
+export  {add ,sub, mul, div};
